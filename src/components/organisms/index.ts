@@ -1,0 +1,10 @@
+export { HeroSection } from "./HeroSection";
+export { AboutSection } from "./AboutSection";
+export { ProductsSection } from "./ProductsSection";
+export { PreparationSection } from "./PreparationSection";
+export { QualitySection } from "./QualitySection";
+export { ComparisonSection } from "./ComparisonSection";
+export { EnjoySection } from "./EnjoySection";
+export { TestimonialsSection } from "./TestimonialsSection";
+export { CTASection } from "./CTASection";
+export { Footer } from "./Footer";

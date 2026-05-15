@@ -1,0 +1,261 @@
+@import "tailwindcss";
+
+:root {
+  /* Rivolia color palette */
+  --color-primary: #A61E22;
+  --color-secondary: #4E2F2B;
+  --color-hover: #AF8846;
+  --color-buy-now-hover: #651410;
+  --color-dark: #271110;
+  --color-beige: #CFC3B5;
+  --color-white: #FFFFFF;
+
+  /* Aliases: usage names that reuse the palette above */
+  --color-primary-dark: var(--color-buy-now-hover);
+  --color-primary-light: var(--color-hover);
+  --color-secondary-dark: var(--color-dark);
+  --color-gold: var(--color-hover);
+  --color-cream: var(--color-beige);
+  --color-cream-dark: var(--color-beige);
+  --color-cream-light: var(--color-beige);
+  --color-black: var(--color-dark);
+  --color-black-soft: var(--color-secondary);
+  --color-gray: var(--color-secondary);
+  --color-gray-light: var(--color-beige);
+  --color-button-bg: var(--color-secondary);
+  --color-button-active: var(--color-primary);
+  --color-button-hover: var(--color-hover);
+  --color-pack-20-bg: var(--color-secondary);
+  --color-pack-20-hover: var(--color-buy-now-hover);
+  --color-card-button: var(--color-hover);
+  --color-whatsapp-bg: var(--color-beige);
+  --color-whatsapp-text: var(--color-secondary);
+  --color-testimonial-icon: var(--color-dark);
+  
+  /* Semantic tokens */
+  --background: var(--color-cream);
+  --background-dark: var(--color-black);
+  --foreground: var(--color-black);
+  --foreground-light: var(--color-white);
+
+  /* Rivolia typography scale */
+  --font-size-61pt: 5.083rem;
+  --font-size-44pt: 3.667rem;
+  --font-size-36pt: 3rem;
+  --font-size-35pt: 2.917rem;
+  --font-size-30pt: 2.5rem;
+  --font-size-25pt: 2.083rem;
+  --font-size-24pt: 2rem;
+  --font-size-23pt: 1.917rem;
+  --font-size-22pt: 1.833rem;
+  --font-size-20pt: 1.667rem;
+  --font-size-19pt: 1.583rem;
+  --font-size-18pt: 1.5rem;
+  
+  /* Spacing */
+  --section-padding: 4rem;
+  --container-max: 1280px;
+  
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-dark: var(--background-dark);
+  --color-foreground: var(--foreground);
+  --color-foreground-light: var(--foreground-light);
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-primary-light: var(--color-primary-light);
+  --color-secondary: var(--color-secondary);
+  --color-secondary-dark: var(--color-secondary-dark);
+  --color-gold: var(--color-gold);
+  --color-cream: var(--color-cream);
+  --color-cream-dark: var(--color-cream-dark);
+  --color-cream-light: var(--color-cream-light);
+  --color-black: var(--color-black);
+  --color-black-soft: var(--color-black-soft);
+  --color-white: var(--color-white);
+  --color-gray: var(--color-gray);
+  --color-gray-light: var(--color-gray-light);
+  --color-button-bg: var(--color-button-bg);
+  --color-button-active: var(--color-button-active);
+  --color-button-hover: var(--color-button-hover);
+  --color-buy-now-hover: var(--color-buy-now-hover);
+  --color-pack-20-bg: var(--color-pack-20-bg);
+  --color-pack-20-hover: var(--color-pack-20-hover);
+  --color-card-button: var(--color-card-button);
+  --color-whatsapp-bg: var(--color-whatsapp-bg);
+  --color-whatsapp-text: var(--color-whatsapp-text);
+  --color-testimonial-icon: var(--color-testimonial-icon);
+  --font-sans: var(--font-montserrat), system-ui, sans-serif;
+  --font-body: var(--font-montserrat), system-ui, sans-serif;
+  --font-heading: var(--font-cinzel), Georgia, serif;
+  --text-61pt: var(--font-size-61pt);
+  --text-44pt: var(--font-size-44pt);
+  --text-36pt: var(--font-size-36pt);
+  --text-35pt: var(--font-size-35pt);
+  --text-30pt: var(--font-size-30pt);
+  --text-25pt: var(--font-size-25pt);
+  --text-24pt: var(--font-size-24pt);
+  --text-23pt: var(--font-size-23pt);
+  --text-22pt: var(--font-size-22pt);
+  --text-20pt: var(--font-size-20pt);
+  --text-19pt: var(--font-size-19pt);
+  --text-18pt: var(--font-size-18pt);
+}
+
+@layer utilities {
+  .type-montserrat-bold-61pt {
+    font-family: var(--font-montserrat), system-ui, sans-serif;
+    font-size: var(--font-size-61pt);
+    font-weight: 700;
+    line-height: 0.98;
+  }
+
+  .type-montserrat-light-24pt {
+    font-family: var(--font-montserrat), system-ui, sans-serif;
+    font-size: var(--font-size-24pt);
+    font-weight: 300;
+    line-height: 1.45;
+  }
+
+  .type-montserrat-light-19pt {
+    font-family: var(--font-montserrat), system-ui, sans-serif;
+    font-size: var(--font-size-19pt);
+    font-weight: 300;
+    line-height: 1.45;
+  }
+
+  .type-montserrat-light-18pt {
+    font-family: var(--font-montserrat), system-ui, sans-serif;
+    font-size: var(--font-size-18pt);
+    font-weight: 300;
+    line-height: 1.45;
+  }
+
+  .type-montserrat-regular-22pt {
+    font-family: var(--font-montserrat), system-ui, sans-serif;
+    font-size: var(--font-size-22pt);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  .type-montserrat-bold-20pt {
+    font-family: var(--font-montserrat), system-ui, sans-serif;
+    font-size: var(--font-size-20pt);
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  .type-cinzel-bold-44pt {
+    font-family: var(--font-cinzel), Georgia, serif;
+    font-size: var(--font-size-44pt);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .type-cinzel-bold-36pt {
+    font-family: var(--font-cinzel), Georgia, serif;
+    font-size: var(--font-size-36pt);
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  .type-cinzel-bold-35pt {
+    font-family: var(--font-cinzel), Georgia, serif;
+    font-size: var(--font-size-35pt);
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  .type-cinzel-bold-30pt {
+    font-family: var(--font-cinzel), Georgia, serif;
+    font-size: var(--font-size-30pt);
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  .type-cinzel-bold-25pt {
+    font-family: var(--font-cinzel), Georgia, serif;
+    font-size: var(--font-size-25pt);
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  .type-cinzel-bold-20pt {
+    font-family: var(--font-cinzel), Georgia, serif;
+    font-size: var(--font-size-20pt);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .type-cinzel-bold-18pt {
+    font-family: var(--font-cinzel), Georgia, serif;
+    font-size: var(--font-size-18pt);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .type-cinzel-regular-30pt {
+    font-family: var(--font-cinzel), Georgia, serif;
+    font-size: var(--font-size-30pt);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  .type-cinzel-regular-23pt {
+    font-family: var(--font-cinzel), Georgia, serif;
+    font-size: var(--font-size-23pt);
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  .type-cinzel-regular-20pt {
+    font-family: var(--font-cinzel), Georgia, serif;
+    font-size: var(--font-size-20pt);
+    font-weight: 400;
+    line-height: 1.25;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+/* Selection */
+::selection {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
