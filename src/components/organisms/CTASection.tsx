@@ -8,7 +8,7 @@ import { Button } from "../atoms/Button";
 
 export function CTASection() {
   return (
-    <section className="py-16 md:py-24 bg-[var(--color-secondary-dark)] relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-secondary-dark relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
@@ -29,9 +29,9 @@ export function CTASection() {
               Descubre la experiencia del cafe filtrado real, sin complicaciones.
             </Text>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg">Comprar ahora</Button>
-              <Button variant="secondary" size="lg">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <Button size="lg" className="w-full sm:w-auto">Comprar ahora</Button>
+              <Button variant="secondary" size="lg" className="w-full sm:w-auto">
                 Comprar pack 20
               </Button>
             </div>
@@ -43,7 +43,7 @@ export function CTASection() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-6 flex items-center gap-2"
             >
-              <span className="inline-block w-2 h-2 rounded-full bg-[var(--color-primary)] animate-pulse" />
+              <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse" />
               <p className="text-white type-cinzel-bold-20pt">
                 Ultimos packs disponibles
               </p>

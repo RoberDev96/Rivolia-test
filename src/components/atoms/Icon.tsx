@@ -33,7 +33,7 @@ export function Icon({ name, size = "md", className = "" }: IconProps) {
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         viewport={{ once: true }}
-        className={`${sizeClasses[size]} text-[var(--color-primary)] ${className}`}
+        className={`${sizeClasses[size]} text-primary ${className}`}
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -54,7 +54,7 @@ export function Icon({ name, size = "md", className = "" }: IconProps) {
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         viewport={{ once: true }}
-        className={`${sizeClasses[size]} text-[var(--color-gray)] ${className}`}
+        className={`${sizeClasses[size]} text-gray ${className}`}
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"

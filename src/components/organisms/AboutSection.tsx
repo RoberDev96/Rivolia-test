@@ -6,7 +6,7 @@ import { Text } from "../atoms/Text";
 
 export function AboutSection() {
   return (
-    <section className="py-16 md:py-24 bg-[#BFAE9B]">
+    <section id="about" className="py-16 md:py-24 bg-[#BFAE9B]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

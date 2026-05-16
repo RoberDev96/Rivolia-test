@@ -7,7 +7,7 @@ import { products } from "@/lib/constants";
 
 export function ProductsSection() {
   return (
-    <section className="py-16 md:py-24 bg-cream-dark">
+    <section id="products" className="py-16 md:py-24 bg-cream-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -16,9 +16,13 @@ export function ProductsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <Heading as="h2" variant="title" className="text-primary">
-            Elige como disfrutar Rivolia
-          </Heading>
+          <div className="flex items-center justify-center gap-4">
+            <span className="hidden sm:block h-px flex-1 bg-primary/45" />
+            <Heading as="h2" variant="title" className="text-primary">
+              Elige como disfrutar Rivolia
+            </Heading>
+            <span className="hidden sm:block h-px flex-1 bg-primary/45" />
+          </div>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

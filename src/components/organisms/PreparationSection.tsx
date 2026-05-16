@@ -8,7 +8,7 @@ import { preparationSteps } from "@/lib/constants";
 
 export function PreparationSection() {
   return (
-    <section className="py-16 md:py-24 bg-cream-dark relative overflow-hidden">
+    <section id="preparation" className="py-16 md:py-24 bg-cream-dark relative overflow-hidden">
       {/* Background decorative image */}
       <div className="absolute inset-0 opacity-10">
         <Image
@@ -27,12 +27,16 @@ export function PreparationSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-6"
         >
-          <Heading
-            as="h2"
-            className="text-white type-cinzel-bold-36pt"
-          >
-            Mas facil que preparar te
-          </Heading>
+          <div className="flex items-center justify-center gap-4">
+            <span className="hidden sm:block h-px flex-1 bg-white/45" />
+            <Heading
+              as="h2"
+              className="text-white type-cinzel-bold-36pt"
+            >
+              Mas facil que preparar te
+            </Heading>
+            <span className="hidden sm:block h-px flex-1 bg-white/45" />
+          </div>
         </motion.div>
 
         <motion.div

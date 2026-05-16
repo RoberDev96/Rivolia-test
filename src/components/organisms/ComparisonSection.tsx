@@ -6,10 +6,11 @@ import { Heading } from "../atoms/Heading";
 import { ComparisonColumn } from "../molecules/ComparisonColumn";
 import { comparisonData } from "@/lib/constants";
 
+
 export function ComparisonSection() {
   return (
-    <section className="py-16 md:py-24 bg-[var(--color-cream)]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="comparison" className="py-16 md:py-24 bg-cream relative overflow-hidden px-2.5">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -17,60 +18,54 @@ export function ComparisonSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <Heading as="h2" variant="title" className="text-[var(--color-primary)]">
-            Rivolia vs Cafe Instantaneo
-          </Heading>
+          <div className="flex items-center justify-center gap-4">
+            <span className="hidden sm:block h-px flex-1 bg-primary/45" />
+            <Heading as="h2" variant="title" className="text-primary">
+              Rivolia vs Cafe Instantaneo
+            </Heading>
+            <span className="hidden sm:block h-px flex-1 bg-primary/45" />
+          </div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8 items-start">
-          {/* Rivolia Column */}
-          <ComparisonColumn
-            title={comparisonData.rivolia.title}
-            subtitle={comparisonData.rivolia.subtitle}
-            features={comparisonData.rivolia.features}
-            isPositive={true}
-            delay={0}
-          />
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute left-[-70] top-25 h-full w-64 md:w-80 lg:w-100 opacity-50">
+            <Image
+              src="/image/Sección 6  1- Rivolia vs Café instantáneo_082839.png"
+              alt="Rivolia cafe filtrado"
+              fill
+              className="object-contain object-left"
+            />
+          </div>
+          
+          <div className="absolute right-[-70] top-25 h-full w-64 md:w-80 lg:w-100 opacity-50">
+            <Image
+              src="/image/Sección 6 2- Rivolia vs Café instantáneo_082854.png"
+              alt="Cafe instantaneo"
+              fill
+              className="object-contain object-right"
+            />
+          </div>
+        </div>
 
-          {/* Center Images */}
-          <div className="hidden lg:flex flex-col gap-8 items-center justify-center">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative w-48 h-48"
-            >
-              <Image
-                src="/image/Sección 6  1- Rivolia vs Café instantáneo_082839.png"
-                alt="Rivolia cafe filtrado"
-                fill
-                className="object-contain"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="relative w-48 h-48"
-            >
-              <Image
-                src="/image/Sección 6 2- Rivolia vs Café instantáneo_082854.png"
-                alt="Cafe instantaneo"
-                fill
-                className="object-contain"
-              />
-            </motion.div>
+        <div className="flex justify-center  items-start relative z-20">
+          <div className="flex justify-center">
+            <ComparisonColumn
+              title={comparisonData.rivolia.title}
+              subtitle={comparisonData.rivolia.subtitle}
+              features={comparisonData.rivolia.features}
+              isPositive={true}
+              delay={0}
+            />
           </div>
 
-          {/* Instant Coffee Column */}
-          <ComparisonColumn
-            title={comparisonData.instantaneo.title}
-            features={comparisonData.instantaneo.features}
-            isPositive={false}
-            delay={0.3}
-          />
+          <div className="flex justify-center">
+            <ComparisonColumn
+              title={comparisonData.instantaneo.title}
+              features={comparisonData.instantaneo.features}
+              isPositive={false}
+              delay={0.3}
+            />
+          </div>
         </div>
       </div>
     </section>

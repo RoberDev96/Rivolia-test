@@ -27,7 +27,11 @@ export function PreparationStep({
     >
       <motion.div
         whileHover={{ scale: 1.05 }}
-        className="relative w-48 h-48 md:w-64 md:h-64 mb-4 rounded-full overflow-hidden bg-black"
+        className="relative w-48 h-48 md:w-64 md:h-64 mb-4 overflow-hidden"
+        style={{
+          maskImage: "radial-gradient(circle, black 60%, transparent 100%)",
+          WebkitMaskImage: "radial-gradient(circle, black 60%, transparent 100%)",
+        }}
       >
         <Image
           src={image}

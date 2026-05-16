@@ -8,9 +8,10 @@ interface FeatureItemProps {
   icon: "clock" | "truck" | "fire";
   text: React.ReactNode;
   delay?: number;
+  className?: string;
 }
 
-export function FeatureItem({ icon, text, delay = 0 }: FeatureItemProps) {
+export function FeatureItem({ icon, text, delay = 0, className = "" }: FeatureItemProps) {
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}
@@ -20,7 +21,7 @@ export function FeatureItem({ icon, text, delay = 0 }: FeatureItemProps) {
       className="flex items-center gap-3"
     >
       <Icon name={icon} size="md" />
-      <Text className="text-secondary">{text}</Text>
+      <Text className={`text-secondary ${className}`}>{text}</Text>
     </motion.div>
   );
 }

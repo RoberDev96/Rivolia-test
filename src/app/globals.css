@@ -10,14 +10,12 @@
   --color-beige: #CFC3B5;
   --color-white: #FFFFFF;
 
-  /* Aliases: usage names that reuse the palette above */
+  /* Aliases */
   --color-primary-dark: var(--color-buy-now-hover);
   --color-primary-light: var(--color-hover);
   --color-secondary-dark: var(--color-dark);
-  --color-gold: var(--color-hover);
   --color-cream: var(--color-beige);
   --color-cream-dark: var(--color-beige);
-  --color-cream-light: var(--color-beige);
   --color-black: var(--color-dark);
   --color-black-soft: var(--color-secondary);
   --color-gray: var(--color-secondary);
@@ -27,18 +25,18 @@
   --color-button-hover: var(--color-hover);
   --color-pack-20-bg: var(--color-secondary);
   --color-pack-20-hover: var(--color-buy-now-hover);
-  --color-card-button: var(--color-hover);
+  --color-card-button: #CFC3B5;
   --color-whatsapp-bg: var(--color-beige);
   --color-whatsapp-text: var(--color-secondary);
   --color-testimonial-icon: var(--color-dark);
-  
+
   /* Semantic tokens */
   --background: var(--color-cream);
   --background-dark: var(--color-black);
   --foreground: var(--color-black);
   --foreground-light: var(--color-white);
 
-  /* Rivolia typography scale */
+  /* Typography scale */
   --font-size-61pt: 5.083rem;
   --font-size-44pt: 3.667rem;
   --font-size-36pt: 3rem;
@@ -51,16 +49,6 @@
   --font-size-20pt: 1.667rem;
   --font-size-19pt: 1.583rem;
   --font-size-18pt: 1.5rem;
-  
-  /* Spacing */
-  --section-padding: 4rem;
-  --container-max: 1280px;
-  
-  /* Border radius */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 1rem;
-  --radius-full: 9999px;
 }
 
 @theme inline {
@@ -73,10 +61,8 @@
   --color-primary-light: var(--color-primary-light);
   --color-secondary: var(--color-secondary);
   --color-secondary-dark: var(--color-secondary-dark);
-  --color-gold: var(--color-gold);
   --color-cream: var(--color-cream);
   --color-cream-dark: var(--color-cream-dark);
-  --color-cream-light: var(--color-cream-light);
   --color-black: var(--color-black);
   --color-black-soft: var(--color-black-soft);
   --color-white: var(--color-white);
@@ -95,18 +81,6 @@
   --font-sans: var(--font-montserrat), system-ui, sans-serif;
   --font-body: var(--font-montserrat), system-ui, sans-serif;
   --font-heading: var(--font-cinzel), Georgia, serif;
-  --text-61pt: var(--font-size-61pt);
-  --text-44pt: var(--font-size-44pt);
-  --text-36pt: var(--font-size-36pt);
-  --text-35pt: var(--font-size-35pt);
-  --text-30pt: var(--font-size-30pt);
-  --text-25pt: var(--font-size-25pt);
-  --text-24pt: var(--font-size-24pt);
-  --text-23pt: var(--font-size-23pt);
-  --text-22pt: var(--font-size-22pt);
-  --text-20pt: var(--font-size-20pt);
-  --text-19pt: var(--font-size-19pt);
-  --text-18pt: var(--font-size-18pt);
 }
 
 @layer utilities {
@@ -240,7 +214,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -251,10 +224,9 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: var(--color-primary);
-  border-radius: var(--radius-full);
+  border-radius: 9999px;
 }
 
-/* Selection */
 ::selection {
   background: var(--color-primary);
   color: var(--color-white);

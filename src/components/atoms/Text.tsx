@@ -7,6 +7,7 @@ interface TextProps {
   className?: string;
   variant?: "body" | "lead" | "small" | "caption";
   animate?: boolean;
+  style?: React.CSSProperties;
 }
 
 const variantStyles = {
@@ -21,6 +22,7 @@ export function Text({
   className = "",
   variant = "body",
   animate = false,
+  style,
 }: TextProps) {
   if (animate) {
     return (
@@ -30,11 +32,12 @@ export function Text({
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
         className={`${variantStyles[variant]} ${className} text-pretty`}
+        style={style}
       >
         {children}
       </motion.p>
     );
   }
 
-  return <p className={`${variantStyles[variant]} ${className} text-pretty`}>{children}</p>;
+  return <p className={`${variantStyles[variant]} ${className} text-pretty`} style={style}>{children}</p>;
 }
